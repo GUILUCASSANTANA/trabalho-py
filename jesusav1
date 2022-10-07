@@ -1,0 +1,99 @@
+LISTA1 EX1
+
+altura = float(input("\nInforme sua altura = "))
+print("\n1 - Homem | 2 - Mulher")
+sexo = int(input("informe seu sexo = "))
+
+while sexo !=1 and sexo !=2:
+
+        print("\nDados inválidos,tente novamente!\n" "\n1 - Homem | 2 - Mulher")
+        sexo = int(input("informe seu sexo = "))
+
+if(sexo == 1):
+
+        pesoIdeal = 72.7 * altura - 58
+        print(f"\nSeu peso ideal é de: {(round(pesoIdeal,1))} Kg(s)")
+        
+
+elif(sexo == 2):
+
+        pesoIdeal = 62.1 * altura - 44.7
+        print(f"\nSeu peso ideal é de: {(round(pesoIdeal,1))} Kg(s)")
+--
+
+LISTA1 EX2
+
+pesopeixes = float(input("\nDigite a quantidade de kilos de peixes pescados: "))
+excesso = pesopeixes - 50
+
+print(f"\nVocê pescou ",pesopeixes,"kilos de peixe")
+
+
+if(excesso>=0):
+
+    multa = excesso * 4
+    print(f"A quantidade de peixe excedente foi de:",excesso,"Kilos")
+    print(f"O valor da multa será de: R$",multa)
+
+else:
+
+    multa = 0
+    print(f"A quantidade limite de peixe não foi excedida, multa não aplicada :)")
+
+--
+
+LISTA1 EX3
+
+valorhora = float(input("\nDigite o valor da sua hora trabalhada: "))
+horas = float(input("Digite quantas horas você trabalha: "))
+
+salariobruto = (valorhora*horas)
+inss = (salariobruto * 0.08)
+irenda = (salariobruto * 0.11)
+sindicato = (salariobruto * 0.05)
+descontos = (inss+irenda+sindicato)
+salarioliq = (salariobruto-descontos)
+
+print(f"\n+ Salário bruto : R$",salariobruto)
+print(f"- IR (11%) : R$",(round(irenda,2)))
+print(f"- INSS (8%) : R$",(round(inss,2)))
+print(f"- Sindicato (5%) : R$",(round(sindicato,2)))
+print(f"= Salário Liquido : R$",(round(salarioliq,2)))
+
+--
+
+LISTA2 EX3
+
+num = float(input("\nDigite um número: "))
+
+if (num == round(num)):
+
+    print(int(num),"é um número inteiro!")
+
+else:
+
+    print(num,"é um número decimal!")
+
+-- 
+
+LISTA2 EX2
+
+num = int(input("\nDigite um número: "))
+
+if (num%2) == 0:
+
+    print("O número escolhido é par!")
+
+else:
+    
+    print("O número escolhido é ímpar!")
+
+-- 
+
+LISTA2 EX
+
+somaquad = 0
+
+for i in range(10):
+    somaquad += int(input(f"Digite o {i+1}º numero inteiro: ")) ** 2
+print("A soma dos quadrados dos numeros digitados é",somaquad)
